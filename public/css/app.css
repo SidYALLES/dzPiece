@@ -1,0 +1,10 @@
+#footer{
+    margin-top: 1rem;
+    background-color: black;
+    text-decoration-style: solid;
+    position:absolute;
+    bottom:0;
+}
+#t{
+    color: aliceblue;
+}

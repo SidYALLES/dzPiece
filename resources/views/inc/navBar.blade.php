@@ -18,6 +18,8 @@
           </li>
         </ul>
         @if(Auth::check())
+        <span class="label label-success">Success Label</span>
+        <span class="badge">{{Auth::user()->name}}</span>
         <a class="btn" id="logoutBtn" href="/logout">Logout</a>
         @endif
         <form class="form-inline my-2 my-md-0">
@@ -25,3 +27,5 @@
         </form>
       </div>
     </nav>
+    
+    

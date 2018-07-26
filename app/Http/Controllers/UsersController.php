@@ -88,7 +88,9 @@ class UsersController extends Controller
     {
         $data=$request->only('email','password');
         if (Auth::attempt($data)) {
-            return redirect()->intended('/contact');
+            if(Auth::user()->type==0) return view('client.client');
+            else return view('admin.admin');
+            //return redirect()->intended('/contact');
         }
         else 
         {

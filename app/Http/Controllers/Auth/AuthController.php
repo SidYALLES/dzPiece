@@ -78,11 +78,13 @@ class AuthController extends Controller
     {
         $data=$request->only('email','password');
         if (Auth::attempt($data) {
-            return redirect()->intended('/contact');
+            //return redirect()->intended('/contact');
+            echo 'azersdfjksdlf';
         }
         else 
         {
-            return back();
+            //return back();
+            echo 'azersdfjksdlf';
         }
     }
     public function logout()

@@ -8,21 +8,12 @@ use App\Http\Requests;
 
 class AdminController extends Controller
 {
-    public funtion addUser()
-    {
-        
-    }
-    
+    /*
     public funtion updateUser()
     {
         
     }
-    
-    public funtion MAJUser()
-    {
-        
-    }
-    
+
     public funtion addAdmin()
     {
         
@@ -31,5 +22,14 @@ class AdminController extends Controller
     public funtion updateInfo()
     {
         
+    }*/
+    public function addUserForm()
+    {
+        return view('admin.addUserForm');
+    }
+
+    public function addUser(Request $request)
+    {
+        return 'user add';
     }
 }

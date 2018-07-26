@@ -33,4 +33,8 @@ Route::post('/login', 'UsersController@login');
 
 Route::post('/contact/submit','MessageControler@submit');
 
+Route::get('/addUser','AdminController@addUserForm')->name('add_user')->middleware('auth');
+
+Route::post('/addUser','AdminController@addUser')->middleware('auth');;
+
 

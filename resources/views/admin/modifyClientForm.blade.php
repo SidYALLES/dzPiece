@@ -2,8 +2,13 @@
 @section('content_admin')
     <div class="container alert" style="padding: 2rem;background-color: #a6d5ec;margin: 2rem">
 
-        <form id="form1" method="post" action="{{url('/addUser')}}">
-            <select class="form-control" id="selectUser" name="selectUser" >
+        <form id="form2" method="post" action="{{url('/modifyUser')}}">
+            <select class="form-control" id="selectType" name="selectType" >
+                <option>Particulier</option>
+                <option>Privé</option>
+                <option>Concessionnaire</option>
+            </select>
+            <select class="form-control" id="selectUserT" name="selectUserT" >
                 <option>Particulier</option>
                 <option>Privé</option>
                 <option>Concessionnaire</option>

@@ -23,7 +23,9 @@
             </div>
         </div>
     </body>
-    <footer id="footer">
-        <h3 style="text-align:center;" id="t">all rights reserved</h3>
-    </footer>
+    <footer class="page-footer font-small blue">
+  <div class="footer-copyright text-center py-3">© 2018 Copyright:
+    <a href="/"> YSLF.com</a>
+  </div>
+</footer>
 </html>

@@ -35,6 +35,26 @@ Route::post('/contact/submit','MessageControler@submit');
 
 Route::get('/addUser','AdminController@addUserForm')->name('add_user')->middleware('auth');
 
-Route::post('/addUser','AdminController@addUser')->middleware('auth');;
+Route::post('/addUser','AdminController@addUser')->middleware('auth');
+
+Route::get('/admin','UsersController@adminIndex')->middleware('auth');
+
+Route::get('/user','UsersController@userIndex')->middleware('auth');
+
+Route::get('/modifyUser','AdminController@modifyUserForm')->middleware('auth');
+
+Route::post('/modifyUser','AdminController@modifyUser')->middleware('auth');
+
+Route::get('/addUser','AdminController@addAdminForm')->name('add_admin')->middleware('auth');
+
+Route::post('/addUser','AdminController@addAdmin')->middleware('auth');
+
+Route::get('/modifyAdmin','AdminController@modifyAdminForm')->middleware('auth');
+
+Route::post('/modifyAdmin','AdminController@modifyAdmin')->middleware('auth');
+
+Route::get('/modifyInfo','AdminController@modifyInfoForm')->middleware('auth');
+
+Route::post('/modifyInfo','AdminController@modifyInfo')->middleware('auth');
 
 

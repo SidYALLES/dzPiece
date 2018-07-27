@@ -18,8 +18,12 @@
           </li>
         </ul>
         @if(Auth::check())
-        <span class="label label-success">Success Label</span>
-        <span class="badge">{{Auth::user()->name}}</span>
+              @if(Auth::user()->type==0)
+                  <a class="badge" href="/user}">{{Auth::user()->name}}</a>
+              @endif
+              @if(Auth::user()->type==1)
+                  <a class="badge" href="/admin">{{Auth::user()->name}}</a>
+              @endif
         <a class="btn" id="logoutBtn" href="/logout">Logout</a>
         @endif
         <form class="form-inline my-2 my-md-0">

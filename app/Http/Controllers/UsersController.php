@@ -102,4 +102,14 @@ class UsersController extends Controller
             Auth::logout();
             return redirect()->intended('/');
     }
+
+    public function adminIndex()
+    {
+        return view('admin.admin');
+    }
+
+    public function userIndex()
+    {
+        return view('client.client');
+    }
 }

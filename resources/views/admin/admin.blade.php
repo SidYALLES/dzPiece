@@ -8,11 +8,11 @@
                 <span class="caret"></span>
             </button>
             <ul class="dropdown-menu dropdown-menu-right" role="menu">
-                <li><a href="/addUser" methods="get">Add user</a></li>
-                <li><a href="/modifyUser" methods="get">modify user</a></li>
-                <li><a href="/addAdmin" methods="get">Add admin</a></li>
-                <li><a href="/modifyAdmin" methods="get">Modify admin</a></li>
-                <li><a href="/modifyInfo" methods="get">modify info</a></li>
+                <li><a href="/modifyInfo" methods="get">Mes Informations</a></li>
+                <li><a href="/addUser" methods="get">Ajouter Client</a></li>
+                <li><a href="/modifyUser" methods="get">Modifier Client</a></li>
+                <li><a href="/addAdmin" methods="get">Ajouter Admin</a></li>
+                <li><a href="/modifyAdmin" methods="get">Modifier Admin</a></li>
             </ul>
         </div>
     </div>

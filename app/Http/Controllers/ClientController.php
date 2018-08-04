@@ -8,19 +8,25 @@ use App\Http\Requests;
 
 class ClientController extends Controller
 {
-    public funtion seeInfo()
+    public function viewAb()
     {
-        
+        return view('client.abonnInfo');
     }
-    
-    public funtion updateInfo()
+
+    public function viewStats()
     {
-        
+        return view('client.clientStats');
     }
-    
-    public funtion seeAB()
+
+    public function viewInfo()
     {
-        
+        return view('client.infoClient');
     }
+
+    public function viewLp()
+    {
+        return view('client.listePiece');
+    }
+
     
 }

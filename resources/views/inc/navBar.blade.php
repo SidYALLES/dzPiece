@@ -19,7 +19,7 @@
         </ul>
         @if(Auth::check())
               @if(Auth::user()->type==0)
-                  <a class="badge" href="/user}">{{Auth::user()->name}}</a>
+                  <a class="badge" href="/user">{{Auth::user()->name}}</a>
               @endif
               @if(Auth::user()->type==1)
                   <a class="badge" href="/admin">{{Auth::user()->name}}</a>

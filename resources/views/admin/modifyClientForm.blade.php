@@ -1,57 +1,50 @@
 @extends('admin.admin')
 @section('content_admin')
-    <div class="container alert" style="padding: 2rem;background-color: #a6d5ec;margin: 2rem">
+    <div class="container alert" style="">
 
-        <form id="form2" method="post" action="{{url('/modifyUser')}}">
-            <select class="form-control" id="selectType" name="selectType" >
+    <div class="table-responsive" id="employee_details" style="">
+        <form action="{{url('modifyUser')}}" method="post" id="form1">
+            <select class="form-control" id="selectUserType" name="selectUserType" >
+                <option value="0" id="st" selected="selected">Selectionnez un type </option>
                 <option>Particulier</option>
                 <option>Privé</option>
                 <option>Concessionnaire</option>
             </select>
-            <select class="form-control" id="selectUserT" name="selectUserT" >
-                <option>Particulier</option>
-                <option>Privé</option>
-                <option>Concessionnaire</option>
+
+            <select name="email_list" id="email_list" class="form-control">
+                <option value="0" id="st1" selected="selected">Selectionnez l'Email</option>
             </select>
-            <div class="form-row">
-                <div class="form-group col-md-6">
-                    <label for="Email">Adresse mail</label>
-                    <input type="email" class="form-control" id="email" name="email" placeholder="Email">
-                </div>
-                <div class="form-group col-md-6">
-                    <label for="inputPassword4">Mot de passe</label>
-                    <input type="password" class="form-control" id="mdp" name="mdp" placeholder="Password">
-                </div>
-            </div>
-            <div class="form-group">
-                <label for="inputAddress">Nom</label>
-                <input type="text" class="form-control" id="nom" name="nom" placeholder="">
-            </div>
-            <div class="form-group">
-                <label for="inputAddress2">Prenom</label>
-                <input type="text" class="form-control" id="prenom" name="prenom" placeholder="">
-            </div>
-            <div class="form-group">
-                <label for="inputAddress">Nom d'utilisateur</label>
-                <input type="text" class="form-control" id="name" name="name" placeholder="">
-            </div>
-            <div class="form-group">
-                <label for="inputAddress">Date de Naissence</label>
-                <input type="date" class="form-control" id="dateN" name="dateN" placeholder="">
-            </div>
-            <div class="form-group">
-                <label for="inputAddress">Numero</label>
-                <input type="number" class="form-control" id="numero" name="numero" placeholder="">
-            </div>
-            <div class="form-group">
-                <label for="inputAddress">Adresse</label>
-                <input type="text" class="form-control" id="adresse" name="adresse" placeholder="">
-            </div>
+        <table class="table table-bordered">
+            <tr>
+                <td width="10%" align="right"><b>Nom</b></td>
+                <td width="90%"><input name="nom" id="client_nom"></input></td>
+            </tr>
+            <tr>
+                <td width="10%" align="right"><b>Prenom</b></td>
+                <td width="90%"><input name="prenom" id="client_prenom"></input></td>
+            </tr>
+
+            <tr>
+                <td width="10%" align="right"><b>Nom d'utilisateur</b></td>
+                <td width="90%"><span id="client_user_name"></span></td>
+            </tr>
+            <tr>
+                <td width="10%" align="right"><b>Date de Naissence</b></td>
+                <td width="90%"><input type="date" name="dateN" id="dateN"></input></td>
+            </tr>
+            <tr>
+                <td width="10%" align="right"><b>Numero</b></td>
+                <td width="90%"><input type="number" name="numero" id="numero"></input></td>
+            </tr>
+            <tr>
+                <td width="10%" align="right"><b>Adresse</b></td>
+                <td width="90%"><input type="text" name="addresse" id="adresse"></input></td>
+            </tr>
+        </table>
+            <input type="submit" class="btn btn-danger">
             <input type="hidden" name="_token" value="{{ csrf_token() }}">
-
-            <button type="submit" class="btn btn-primary">Enregistrer</button>
         </form>
-
-
+    </div>
+    <script src="/js/a.js"  ></script>
     </div>
 @stop

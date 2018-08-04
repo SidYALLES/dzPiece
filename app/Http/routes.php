@@ -45,9 +45,9 @@ Route::get('/modifyUser','AdminController@modifyUserForm')->middleware('auth');
 
 Route::post('/modifyUser','AdminController@modifyUser')->middleware('auth');
 
-Route::get('/addUser','AdminController@addAdminForm')->name('add_admin')->middleware('auth');
+Route::get('/addAdmin','AdminController@addAdminForm')->name('add_admin')->middleware('auth');
 
-Route::post('/addUser','AdminController@addAdmin')->middleware('auth');
+Route::post('/addAdmin','AdminController@addAdmin')->middleware('auth');
 
 Route::get('/modifyAdmin','AdminController@modifyAdminForm')->middleware('auth');
 
@@ -57,4 +57,16 @@ Route::get('/modifyInfo','AdminController@modifyInfoForm')->middleware('auth');
 
 Route::post('/modifyInfo','AdminController@modifyInfo')->middleware('auth');
 
+Route::get('/listEmail','AdminController@listEmail')->middleware('auth');
 
+Route::get('/infoEmail','AdminController@infoEmail')->middleware('auth');
+
+Route::get('/infoEmailAdmin','AdminController@infoEmailAdmin')->middleware('auth');
+
+Route::get('/client/ab','ClientController@viewAb')->middleware('auth');
+
+Route::get('/client/stats','ClientController@viewStats')->middleware('auth');
+
+Route::get('/client/info','ClientController@viewInfo')->middleware('auth');
+
+Route::get('/client/lp','ClientController@viewLp')->middleware('auth');
